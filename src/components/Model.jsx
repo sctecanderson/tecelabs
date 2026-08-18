@@ -3,7 +3,9 @@ import { Center, useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 
 function Model({ isRotating }) {
-  const { scene } = useGLTF("/models/baseRolo.glb");
+  const { scene } = useGLTF(
+  `${import.meta.env.BASE_URL}models/baseRolo.glb`
+);
 
   const modelRef = useRef();
   const { size } = useThree();
